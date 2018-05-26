@@ -28,12 +28,15 @@ Partial Class Form1
         Me.LblA = New System.Windows.Forms.Label()
         Me.LinkA = New System.Windows.Forms.LinkLabel()
         Me.BtnPCtoMac = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnQuest = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnMactoPC
         '
         Me.BtnMactoPC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMactoPC.Location = New System.Drawing.Point(343, 26)
+        Me.BtnMactoPC.Location = New System.Drawing.Point(340, 80)
         Me.BtnMactoPC.Name = "BtnMactoPC"
         Me.BtnMactoPC.Size = New System.Drawing.Size(83, 25)
         Me.BtnMactoPC.TabIndex = 0
@@ -42,14 +45,14 @@ Partial Class Form1
         '
         'Txtenter
         '
-        Me.Txtenter.Location = New System.Drawing.Point(31, 29)
+        Me.Txtenter.Location = New System.Drawing.Point(28, 83)
         Me.Txtenter.Name = "Txtenter"
         Me.Txtenter.Size = New System.Drawing.Size(306, 21)
         Me.Txtenter.TabIndex = 1
         '
         'TxtA
         '
-        Me.TxtA.Location = New System.Drawing.Point(31, 60)
+        Me.TxtA.Location = New System.Drawing.Point(28, 114)
         Me.TxtA.Name = "TxtA"
         Me.TxtA.Size = New System.Drawing.Size(306, 21)
         Me.TxtA.TabIndex = 2
@@ -65,30 +68,63 @@ Partial Class Form1
         '
         'LinkA
         '
-        Me.LinkA.AutoSize = True
-        Me.LinkA.Location = New System.Drawing.Point(28, 109)
+        Me.LinkA.LinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LinkA.Location = New System.Drawing.Point(28, 154)
         Me.LinkA.Name = "LinkA"
-        Me.LinkA.Size = New System.Drawing.Size(61, 14)
+        Me.LinkA.Size = New System.Drawing.Size(395, 14)
         Me.LinkA.TabIndex = 4
         Me.LinkA.TabStop = True
-        Me.LinkA.Text = "LinkLabel1"
+        Me.LinkA.Text = "PATH"
+        Me.LinkA.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'BtnPCtoMac
         '
         Me.BtnPCtoMac.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnPCtoMac.Location = New System.Drawing.Point(343, 57)
+        Me.BtnPCtoMac.Location = New System.Drawing.Point(340, 111)
         Me.BtnPCtoMac.Name = "BtnPCtoMac"
         Me.BtnPCtoMac.Size = New System.Drawing.Size(83, 25)
         Me.BtnPCtoMac.TabIndex = 0
         Me.BtnPCtoMac.Text = "PC > Mac"
         Me.BtnPCtoMac.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(178, 181)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(87, 14)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Shortcut: Alt + V"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("DIN", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(98, 18)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(260, 46)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "PATH TRACER"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'btnQuest
+        '
+        Me.btnQuest.AutoSize = True
+        Me.btnQuest.Location = New System.Drawing.Point(422, 194)
+        Me.btnQuest.Name = "btnQuest"
+        Me.btnQuest.Size = New System.Drawing.Size(12, 14)
+        Me.btnQuest.TabIndex = 6
+        Me.btnQuest.Text = "?"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(446, 153)
+        Me.ClientSize = New System.Drawing.Size(446, 217)
+        Me.Controls.Add(Me.btnQuest)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LinkA)
         Me.Controls.Add(Me.LblA)
         Me.Controls.Add(Me.TxtA)
@@ -98,6 +134,7 @@ Partial Class Form1
         Me.Font = New System.Drawing.Font("DIN", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -110,4 +147,7 @@ Partial Class Form1
     Friend WithEvents LblA As Label
     Friend WithEvents LinkA As LinkLabel
     Friend WithEvents BtnPCtoMac As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnQuest As Label
 End Class

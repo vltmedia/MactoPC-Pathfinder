@@ -131,7 +131,13 @@ Public Class Form1
                 My.Computer.Keyboard.SendKeys("^c", True)
                 'My.Computer.Clipboard.SetText("This is a test string.")
                 SendKeys.Send("^c")
-                Thread.Sleep(200)
+                Thread.Sleep(20)
+                SendKeys.Send("^c")
+                Thread.Sleep(20)
+                SendKeys.Send("^c")
+                Thread.Sleep(20)
+                SendKeys.Send("^c")
+                Thread.Sleep(100)
                 Dim Clipboardcopy = Clipboard.GetText()
                 'My.Computer.Keyboard.SendKeys("111", True)
                 'MessageBox.Show(Clipboardcopy)
@@ -228,6 +234,13 @@ Public Class Form1
     Private Sub LinkA_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkA.LinkClicked
 
         Process.Start(Mainpath)
+
+    End Sub
+
+    Private Sub btnQuest_Click(sender As Object, e As EventArgs) Handles btnQuest.Click
+
+        Help.Show()
+
 
     End Sub
 End Class
