@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Screencapturekey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">V</Value>
+      <Value Profile="(Default)">C</Value>
     </Setting>
   </Settings>
 </SettingsFile>

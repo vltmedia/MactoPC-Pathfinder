@@ -134,13 +134,48 @@ Public Class Form1
                 Thread.Sleep(200)
                 Dim Clipboardcopy = Clipboard.GetText()
                 'My.Computer.Keyboard.SendKeys("111", True)
-                MessageBox.Show(Clipboardcopy)
+                'MessageBox.Show(Clipboardcopy)
+                Console.WriteLine(Clipboardcopy)
 
-                
+                Dim Pathspasted = Clipboardcopy
+                Dim Windowspath = Pathspasted.Replace("afp://NY01-MP02/Storage NY", "Y:\Storage NY")
+                Windowspath = Windowspath.Replace("/", "\")
+                'k
+                Thread.Sleep(200)
+                Form1.TxtA.Text = Windowspath
+                Form1.LblA.Text = Windowspath
+                Form1.LinkA.Text = Windowspath
+                Form1.Mainpath = Windowspath
+                If Directory.Exists(Windowspath) Then
+                    'MessageBox.Show(Windowspath)
+
+                    Dim cd As String = "cd /d " & Windowspath
+
+
+                    Process.Start("cmd.exe")
+
+
+                    Threading.Thread.Sleep(100)
+                    SendKeys.SendWait(cd)
+                    Threading.Thread.Sleep(10)
+                    SendKeys.SendWait("{ENTER}")
+                    Threading.Thread.Sleep(10)
+                    SendKeys.SendWait("start .")
+                    Threading.Thread.Sleep(10)
+                    SendKeys.SendWait("{ENTER}")
+                    SendKeys.SendWait("exit")
+                    Threading.Thread.Sleep(10)
+                    SendKeys.SendWait("{ENTER}")
+
+                    'Process.Start(Windowspath)
+                Else
+                    Console.WriteLine("BAD" & Form1.LinkA.Text)
+
+                End If
 
             End If
 
-        End If
+            End If
 
 
     End Sub

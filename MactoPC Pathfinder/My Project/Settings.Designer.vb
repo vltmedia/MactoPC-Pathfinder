@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("V")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C")>  _
         Public Property Screencapturekey() As String
             Get
                 Return CType(Me("Screencapturekey"),String)
