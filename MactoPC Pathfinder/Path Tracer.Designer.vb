@@ -22,7 +22,6 @@ Partial Class PathTracer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PathTracer))
         Me.BtnMactoPC = New System.Windows.Forms.Button()
         Me.Txtenter = New System.Windows.Forms.TextBox()
         Me.TxtA = New System.Windows.Forms.TextBox()
@@ -38,7 +37,7 @@ Partial Class PathTracer
         'BtnMactoPC
         '
         Me.BtnMactoPC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMactoPC.Location = New System.Drawing.Point(340, 80)
+        Me.BtnMactoPC.Location = New System.Drawing.Point(864, 70)
         Me.BtnMactoPC.Name = "BtnMactoPC"
         Me.BtnMactoPC.Size = New System.Drawing.Size(83, 25)
         Me.BtnMactoPC.TabIndex = 0
@@ -47,14 +46,14 @@ Partial Class PathTracer
         '
         'Txtenter
         '
-        Me.Txtenter.Location = New System.Drawing.Point(28, 83)
+        Me.Txtenter.Location = New System.Drawing.Point(552, 73)
         Me.Txtenter.Name = "Txtenter"
         Me.Txtenter.Size = New System.Drawing.Size(306, 21)
         Me.Txtenter.TabIndex = 1
         '
         'TxtA
         '
-        Me.TxtA.Location = New System.Drawing.Point(28, 114)
+        Me.TxtA.Location = New System.Drawing.Point(28, 97)
         Me.TxtA.Name = "TxtA"
         Me.TxtA.Size = New System.Drawing.Size(306, 21)
         Me.TxtA.TabIndex = 2
@@ -71,7 +70,7 @@ Partial Class PathTracer
         'LinkA
         '
         Me.LinkA.LinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LinkA.Location = New System.Drawing.Point(28, 154)
+        Me.LinkA.Location = New System.Drawing.Point(25, 142)
         Me.LinkA.Name = "LinkA"
         Me.LinkA.Size = New System.Drawing.Size(395, 14)
         Me.LinkA.TabIndex = 4
@@ -82,7 +81,7 @@ Partial Class PathTracer
         'BtnPCtoMac
         '
         Me.BtnPCtoMac.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnPCtoMac.Location = New System.Drawing.Point(340, 111)
+        Me.BtnPCtoMac.Location = New System.Drawing.Point(340, 94)
         Me.BtnPCtoMac.Name = "BtnPCtoMac"
         Me.BtnPCtoMac.Size = New System.Drawing.Size(83, 25)
         Me.BtnPCtoMac.TabIndex = 0
@@ -132,7 +131,7 @@ Partial Class PathTracer
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(446, 217)
+        Me.ClientSize = New System.Drawing.Size(461, 217)
         Me.Controls.Add(Me.btnQuest)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
@@ -145,7 +144,6 @@ Partial Class PathTracer
         Me.Controls.Add(Me.BtnMactoPC)
         Me.Font = New System.Drawing.Font("DIN", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "PathTracer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Path Tracer"

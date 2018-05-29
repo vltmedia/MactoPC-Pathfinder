@@ -487,6 +487,8 @@ Public Class PathTracer
     End Sub
 
     Public Shared Sub screenCapture()
+        Dim Countdown = 10
+
         Dim Windowtit = "Window"
         Dim hWnd As IntPtr = GetForegroundWindow()
         'hwnd = FindWindow(Nothing, "Calculator")
@@ -578,7 +580,10 @@ Public Class PathTracer
                         'Process.Start(Windowspath)
                     Else
                         MessageBox.Show("The directory does not exist. Check again.")
-
+                        Countdown = Countdown - 1
+                        Console.WriteLine(Countdown)
+                        NoDir.Show()
+                        NoDir.TopMost = True
                     End If
 
 
@@ -623,7 +628,8 @@ Public Class PathTracer
                         'Process.Start(Windowspath)
                     Else
                         Console.WriteLine("BAD" & PathTracer.LinkA.Text)
-                        MessageBox.Show("The directory does not exist. Check again.")
+                        NoDir.Show()
+                        NoDir.TopMost = True
                     End If
 
 
@@ -671,6 +677,8 @@ Public Class PathTracer
                         Else
                             Console.WriteLine("BAD" & PathTracer.LinkA.Text)
                             MessageBox.Show("The directory does not exist. Check again.")
+                            NoDir.Show()
+                            NoDir.TopMost = True
                         End If
 
                         'Software
@@ -715,7 +723,8 @@ Public Class PathTracer
                                 'Process.Start(Windowspath)
                             Else
                                 Console.WriteLine("BAD" & PathTracer.LinkA.Text)
-                                MessageBox.Show("The directory does not exist. Check again.")
+                                NoDir.Show()
+                                NoDir.TopMost = True
                             End If
 
                             'Multimedia
@@ -760,7 +769,8 @@ Public Class PathTracer
                                     'Process.Start(Windowspath)
                                 Else
                                     Console.WriteLine("BAD" & PathTracer.LinkA.Text)
-                                    MessageBox.Show("The directory does not exist. Check again.")
+                                    NoDir.Show()
+                                    NoDir.TopMost = True
                                 End If
 
                             Else
@@ -807,7 +817,8 @@ Public Class PathTracer
                                         'Process.Start(Windowspath)
                                     Else
                                         Console.WriteLine("BAD" & PathTracer.LinkA.Text)
-                                        MessageBox.Show("The directory does not exist. Check again.")
+                                        NoDir.Show()
+                                        NoDir.TopMost = True
                                     End If
 
                                     'ArchiveProjects2016
@@ -852,7 +863,8 @@ Public Class PathTracer
                                             'Process.Start(Windowspath)
                                         Else
                                             Console.WriteLine("BAD" & PathTracer.LinkA.Text)
-                                            MessageBox.Show("The directory does not exist. Check again.")
+                                            NoDir.Show()
+                                            NoDir.TopMost = True
                                         End If
 
                                         'ArchiveProjects2017
@@ -897,7 +909,8 @@ Public Class PathTracer
                                                 'Process.Start(Windowspath)
                                             Else
                                                 Console.WriteLine("BAD" & PathTracer.LinkA.Text)
-                                                MessageBox.Show("The directory does not exist. Check again.")
+                                                NoDir.Show()
+                                                NoDir.TopMost = True
                                             End If
 
                                         Else
@@ -941,7 +954,8 @@ Public Class PathTracer
                                                     'Process.Start(Windowspath)
                                                 Else
                                                     Console.WriteLine("BAD" & PathTracer.LinkA.Text)
-                                                    MessageBox.Show("The directory does not exist. Check again.")
+                                                    NoDir.Show()
+                                                    NoDir.TopMost = True
                                                 End If
 
 
@@ -1005,20 +1019,156 @@ Public Class PathTracer
 
     Private Sub BtnPCtoMac_Click(sender As Object, e As EventArgs) Handles BtnPCtoMac.Click
         Dim Pathspasted = TxtA.Text
-        Dim Macpath = Pathspasted.Replace("\", "/")
-
-        Console.WriteLine(TxtA.Text)
-        Console.WriteLine(LblA.Text)
-        Console.WriteLine(LinkA.Text)
-        Console.WriteLine(Macpath)
-        Console.WriteLine(LblA.Text)
-        Console.WriteLine(LinkA.Text)
 
 
-        TxtA.Text = Macpath
-        LblA.Text = Macpath
-        LinkA.Text = Macpath
-        Mainpath = Macpath
+        If Pathspasted.Contains(Marketingc) Then
+            Console.WriteLine(StorageNyc)
+            Console.WriteLine(Pathspasted)
+            Dim Macpath = Pathspasted
+            'Continue on
+            Console.WriteLine(Pathspasted)
+            Macpath = Macpath.Replace(StorageNyc, StorageNyMac1)
+            'MessageBox.Show(Macpath)
+            Macpath = Macpath.Replace("\", "/")
+            Thread.Sleep(200)
+            TxtA.Text = Macpath
+            LblA.Text = Macpath
+            LinkA.Text = Macpath
+            Mainpath = Macpath
+            Console.WriteLine(Macpath)
+        ElseIf Pathspasted.Contains(Usersharesc) Then
+
+            Console.WriteLine(Usersharesc)
+            Console.WriteLine(Pathspasted)
+            Dim Macpath = Pathspasted
+            'Continue on
+            Console.WriteLine(Pathspasted)
+            Macpath = Macpath.Replace(Usersharesc, UsersharesMac1)
+            'MessageBox.Show(Macpath)
+            Macpath = Macpath.Replace("\", "/")
+            Thread.Sleep(200)
+            TxtA.Text = Macpath
+            LblA.Text = Macpath
+            LinkA.Text = Macpath
+            Mainpath = Macpath
+            Console.WriteLine(Macpath)
+        ElseIf Pathspasted.Contains(Softwarec) Then
+
+            Console.WriteLine(Softwarec)
+            Console.WriteLine(Pathspasted)
+            Dim Macpath = Pathspasted
+            'Continue on
+            Console.WriteLine(Pathspasted)
+            Macpath = Macpath.Replace(Softwarec, SoftwareMac1)
+            'MessageBox.Show(Macpath)
+            Macpath = Macpath.Replace("\", "/")
+            Thread.Sleep(200)
+            TxtA.Text = Macpath
+            LblA.Text = Macpath
+            LinkA.Text = Macpath
+            Mainpath = Macpath
+            Console.WriteLine(Macpath)
+        ElseIf Pathspasted.Contains(Multimediac) Then
+
+            Console.WriteLine(Multimediac)
+            Console.WriteLine(Pathspasted)
+            Dim Macpath = Pathspasted
+            'Continue on
+            Console.WriteLine(Pathspasted)
+
+            Macpath = Macpath.Replace(Multimediac, MultimediaMac1)
+            'MessageBox.Show(Macpath)
+            Macpath = Macpath.Replace("\", "/")
+            Thread.Sleep(200)
+            TxtA.Text = Macpath
+            LblA.Text = Macpath
+            LinkA.Text = Macpath
+            Mainpath = Macpath
+            Console.WriteLine(Macpath)
+        ElseIf Pathspasted.Contains(JKRAssetBankc) Then
+
+            Console.WriteLine(JKRAssetBankc)
+            Console.WriteLine(Pathspasted)
+            Dim Macpath = Pathspasted
+            'Continue on
+            Console.WriteLine(Pathspasted)
+            Macpath = Macpath.Replace(JKRAssetBankc, JKRAssetBankMac1)
+            'MessageBox.Show(Macpath)
+            Macpath = Macpath.Replace("\", "/")
+            Thread.Sleep(200)
+            TxtA.Text = Macpath
+            LblA.Text = Macpath
+            LinkA.Text = Macpath
+            Mainpath = Macpath
+            Console.WriteLine(Macpath)
+        ElseIf Pathspasted.Contains(ArchiveProjects2016c) Then
+
+            Console.WriteLine(ArchiveProjects2016c)
+            Console.WriteLine(Pathspasted)
+            Dim Macpath = Pathspasted
+            'Continue on
+            Console.WriteLine(Pathspasted)
+
+            Macpath = Macpath.Replace(ArchiveProjects2016c, ArchiveProjects2016Mac1)
+            'MessageBox.Show(Macpath)
+            Macpath = Macpath.Replace("\", "/")
+            Thread.Sleep(200)
+            TxtA.Text = Macpath
+            LblA.Text = Macpath
+            LinkA.Text = Macpath
+            Mainpath = Macpath
+            Console.WriteLine(Macpath)
+        ElseIf Pathspasted.Contains(ArchiveProjects2017c) Then
+
+            Console.WriteLine(ArchiveProjects2017c)
+            Console.WriteLine(Pathspasted)
+            Dim Macpath = Pathspasted
+            'Continue on
+            Console.WriteLine(Pathspasted)
+            Macpath = Macpath.Replace(ArchiveProjects2017c, ArchiveProjects2017Mac1)
+            'MessageBox.Show(Macpath)
+            Macpath = Macpath.Replace("\", "/")
+            Thread.Sleep(200)
+            TxtA.Text = Macpath
+            LblA.Text = Macpath
+            LinkA.Text = Macpath
+            Mainpath = Macpath
+            Console.WriteLine(Macpath)
+        ElseIf Pathspasted.Contains(StorageNyc) Then
+
+            Console.WriteLine(ArchiveProjects2017c)
+            Console.WriteLine(Pathspasted)
+            Dim Macpath = Pathspasted
+            'Continue on
+            Console.WriteLine(Pathspasted)
+            Macpath = Macpath.Replace(StorageNyc, StorageNyMac1)
+            'MessageBox.Show(Macpath)
+            Macpath = Macpath.Replace("\", "/")
+            Thread.Sleep(200)
+            TxtA.Text = Macpath
+            LblA.Text = Macpath
+            LinkA.Text = Macpath
+            Mainpath = Macpath
+            Console.WriteLine(Macpath)
+        End If
+
+
+
+
+        'Dim Macpath = Pathspasted.Replace("\", "/")
+
+        'Console.WriteLine(TxtA.Text)
+        'Console.WriteLine(LblA.Text)
+        'Console.WriteLine(LinkA.Text)
+        'Console.WriteLine(Macpath)
+        'Console.WriteLine(LblA.Text)
+        'Console.WriteLine(LinkA.Text)
+
+
+        'TxtA.Text = Macpath
+        'LblA.Text = Macpath
+        'LinkA.Text = Macpath
+        'Mainpath = Macpath
 
 
     End Sub
