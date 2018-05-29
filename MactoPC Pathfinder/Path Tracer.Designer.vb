@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class PathTracer
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -116,7 +116,7 @@ Partial Class Form1
         Me.btnQuest.TabIndex = 6
         Me.btnQuest.Text = "?"
         '
-        'Form1
+        'PathTracer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -133,9 +133,9 @@ Partial Class Form1
         Me.Controls.Add(Me.BtnMactoPC)
         Me.Font = New System.Drawing.Font("DIN", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
-        Me.Name = "Form1"
+        Me.Name = "PathTracer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Path Tracer"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

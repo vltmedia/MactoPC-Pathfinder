@@ -30,7 +30,7 @@
     End Sub
     Public Shared Sub handleHotKeyEvent(ByVal hotkeyID As IntPtr)
         'MsgBox("The hotkey was pressed")
-        Form1.screenCapture()
+        PathTracer.screenCapture()
 
     End Sub
 #End Region

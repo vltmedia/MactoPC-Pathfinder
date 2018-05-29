@@ -7,7 +7,7 @@ Imports System.Threading
 Imports System.Runtime.InteropServices
 Imports System.Text
 
-Public Class Form1
+Public Class PathTracer
     <DllImport("user32.dll", EntryPoint:="GetWindowThreadProcessId")>
     Private Shared Function GetWindowThreadProcessId(<InAttribute()> ByVal hWnd As IntPtr, ByRef lpdwProcessId As Integer) As Integer
     End Function
@@ -148,10 +148,10 @@ Public Class Form1
                 Windowspath = Windowspath.Replace("/", "\")
                 'k
                 Thread.Sleep(200)
-                Form1.TxtA.Text = Windowspath
-                Form1.LblA.Text = Windowspath
-                Form1.LinkA.Text = Windowspath
-                Form1.Mainpath = Windowspath
+                PathTracer.TxtA.Text = Windowspath
+                PathTracer.LblA.Text = Windowspath
+                PathTracer.LinkA.Text = Windowspath
+                PathTracer.Mainpath = Windowspath
                 If Directory.Exists(Windowspath) Then
                     'MessageBox.Show(Windowspath)
 
@@ -175,7 +175,7 @@ Public Class Form1
 
                     'Process.Start(Windowspath)
                 Else
-                    Console.WriteLine("BAD" & Form1.LinkA.Text)
+                    Console.WriteLine("BAD" & PathTracer.LinkA.Text)
 
                 End If
 

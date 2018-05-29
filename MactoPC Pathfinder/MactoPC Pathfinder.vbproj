@@ -72,11 +72,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Path Tracer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Path Tracer.Designer.vb">
+      <DependentUpon>Path Tracer.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Help.Designer.vb">
@@ -104,8 +104,8 @@
     <Compile Include="Win32.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Path Tracer.resx">
+      <DependentUpon>Path Tracer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.vb</DependentUpon>
