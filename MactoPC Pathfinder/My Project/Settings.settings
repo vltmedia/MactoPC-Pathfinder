@@ -5,5 +5,41 @@
     <Setting Name="Screencapturekey" Type="System.String" Scope="User">
       <Value Profile="(Default)">C</Value>
     </Setting>
+    <Setting Name="Marketing" Type="System.String" Scope="User">
+      <Value Profile="(Default)">H</Value>
+    </Setting>
+    <Setting Name="StorageNy" Type="System.String" Scope="User">
+      <Value Profile="(Default)">J</Value>
+    </Setting>
+    <Setting Name="Usershares" Type="System.String" Scope="User">
+      <Value Profile="(Default)">K</Value>
+    </Setting>
+    <Setting Name="ArchiveProjects2016" Type="System.String" Scope="User">
+      <Value Profile="(Default)">L</Value>
+    </Setting>
+    <Setting Name="ArchiveProjects2017" Type="System.String" Scope="User">
+      <Value Profile="(Default)">X</Value>
+    </Setting>
+    <Setting Name="Multimedia" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Y</Value>
+    </Setting>
+    <Setting Name="jkrAssetBank" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z</Value>
+    </Setting>
+    <Setting Name="SModifierkey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hotkey.KeyModifier.Alt</Value>
+    </Setting>
+    <Setting Name="Shortcutkey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">V</Value>
+    </Setting>
+    <Setting Name="Delay" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="Software" Type="System.String" Scope="User">
+      <Value Profile="(Default)">V</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">M</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -22,6 +22,7 @@ Partial Class PathTracer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PathTracer))
         Me.BtnMactoPC = New System.Windows.Forms.Button()
         Me.Txtenter = New System.Windows.Forms.TextBox()
         Me.TxtA = New System.Windows.Forms.TextBox()
@@ -31,6 +32,7 @@ Partial Class PathTracer
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnQuest = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnMactoPC
@@ -102,7 +104,7 @@ Partial Class PathTracer
         Me.Label2.Font = New System.Drawing.Font("DIN", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(98, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(260, 46)
+        Me.Label2.Size = New System.Drawing.Size(269, 46)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "PATH TRACER"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -116,6 +118,15 @@ Partial Class PathTracer
         Me.btnQuest.TabIndex = 6
         Me.btnQuest.Text = "?"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(12, 194)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(47, 14)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Settings"
+        '
         'PathTracer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
@@ -124,6 +135,7 @@ Partial Class PathTracer
         Me.ClientSize = New System.Drawing.Size(446, 217)
         Me.Controls.Add(Me.btnQuest)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LinkA)
         Me.Controls.Add(Me.LblA)
@@ -133,6 +145,7 @@ Partial Class PathTracer
         Me.Controls.Add(Me.BtnMactoPC)
         Me.Font = New System.Drawing.Font("DIN", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "PathTracer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Path Tracer"
@@ -150,4 +163,5 @@ Partial Class PathTracer
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnQuest As Label
+    Friend WithEvents Label3 As Label
 End Class

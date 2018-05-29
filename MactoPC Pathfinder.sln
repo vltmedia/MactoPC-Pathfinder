@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MactoPC Pathfinder", "MactoPC Pathfinder\MactoPC Pathfinder.vbproj", "{0EDA118A-8243-44C1-B8C5-1724020A3D3D}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PathTracer Setup", "PathTracer Setup\PathTracer Setup.vdproj", "{5BA7ACC5-A781-40CC-9F60-18F0195AF4F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{0EDA118A-8243-44C1-B8C5-1724020A3D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EDA118A-8243-44C1-B8C5-1724020A3D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EDA118A-8243-44C1-B8C5-1724020A3D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA7ACC5-A781-40CC-9F60-18F0195AF4F1}.Debug|Any CPU.ActiveCfg = Debug
+		{5BA7ACC5-A781-40CC-9F60-18F0195AF4F1}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

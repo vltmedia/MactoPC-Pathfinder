@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.6.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -63,6 +63,150 @@ Namespace My
             End Get
             Set
                 Me("Screencapturekey") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("H")>  _
+        Public Property Marketing() As String
+            Get
+                Return CType(Me("Marketing"),String)
+            End Get
+            Set
+                Me("Marketing") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("J")>  _
+        Public Property StorageNy() As String
+            Get
+                Return CType(Me("StorageNy"),String)
+            End Get
+            Set
+                Me("StorageNy") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("K")>  _
+        Public Property Usershares() As String
+            Get
+                Return CType(Me("Usershares"),String)
+            End Get
+            Set
+                Me("Usershares") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("L")>  _
+        Public Property ArchiveProjects2016() As String
+            Get
+                Return CType(Me("ArchiveProjects2016"),String)
+            End Get
+            Set
+                Me("ArchiveProjects2016") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("X")>  _
+        Public Property ArchiveProjects2017() As String
+            Get
+                Return CType(Me("ArchiveProjects2017"),String)
+            End Get
+            Set
+                Me("ArchiveProjects2017") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Y")>  _
+        Public Property Multimedia() As String
+            Get
+                Return CType(Me("Multimedia"),String)
+            End Get
+            Set
+                Me("Multimedia") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Z")>  _
+        Public Property jkrAssetBank() As String
+            Get
+                Return CType(Me("jkrAssetBank"),String)
+            End Get
+            Set
+                Me("jkrAssetBank") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Hotkey.KeyModifier.Alt")>  _
+        Public Property SModifierkey() As String
+            Get
+                Return CType(Me("SModifierkey"),String)
+            End Get
+            Set
+                Me("SModifierkey") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("V")>  _
+        Public Property Shortcutkey() As String
+            Get
+                Return CType(Me("Shortcutkey"),String)
+            End Get
+            Set
+                Me("Shortcutkey") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1000")>  _
+        Public Property Delay() As String
+            Get
+                Return CType(Me("Delay"),String)
+            End Get
+            Set
+                Me("Delay") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("V")>  _
+        Public Property Software() As String
+            Get
+                Return CType(Me("Software"),String)
+            End Get
+            Set
+                Me("Software") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("M")>  _
+        Public Property Setting() As String
+            Get
+                Return CType(Me("Setting"),String)
+            End Get
+            Set
+                Me("Setting") = value
             End Set
         End Property
     End Class

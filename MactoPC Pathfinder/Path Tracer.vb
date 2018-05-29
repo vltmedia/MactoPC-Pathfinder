@@ -8,6 +8,7 @@ Imports System.Runtime.InteropServices
 Imports System.Text
 
 Public Class PathTracer
+
     <DllImport("user32.dll", EntryPoint:="GetWindowThreadProcessId")>
     Private Shared Function GetWindowThreadProcessId(<InAttribute()> ByVal hWnd As IntPtr, ByRef lpdwProcessId As Integer) As Integer
     End Function
@@ -82,14 +83,406 @@ Public Class PathTracer
 
     Private Sub BtnMactoPC_Click(sender As Object, e As EventArgs) Handles BtnMactoPC.Click
         Dim Pathspasted = Txtenter.Text
-        Dim Windowspath = Pathspasted.Replace("afp://NY01-MP02/Storage NY", "Y:\Storage NY")
-        Windowspath = Windowspath.Replace("/", "\")
-        'k
+        Dim Pathh = ""
 
-        TxtA.Text = Windowspath
-        LblA.Text = Windowspath
-        LinkA.Text = Windowspath
-        Mainpath = Windowspath
+        If Pathspasted.Contains(MarketingMac1) Or Pathspasted.Contains(MarketingMac2) Then
+
+
+            Dim Windowspath = Pathspasted.Replace(MarketingMac1, Marketingc)
+            Windowspath = Windowspath.Replace(MarketingMac2, Marketingc)
+            'Continue on
+            Windowspath = Windowspath.Replace("/", "\")
+            Thread.Sleep(200)
+            TxtA.Text = Windowspath
+            LblA.Text = Windowspath
+            LinkA.Text = Windowspath
+            Mainpath = Windowspath
+            If Directory.Exists(Windowspath) Then
+                'MessageBox.Show(Windowspath)
+
+                Dim cd As String = "cd /d " & Windowspath
+
+
+                Process.Start("cmd.exe")
+
+
+                Threading.Thread.Sleep(Delay)
+                SendKeys.SendWait(cd)
+                Threading.Thread.Sleep(10)
+                SendKeys.SendWait("{ENTER}")
+                Threading.Thread.Sleep(10)
+                SendKeys.SendWait("start .")
+                Threading.Thread.Sleep(10)
+                SendKeys.SendWait("{ENTER}")
+                SendKeys.SendWait("exit")
+                Threading.Thread.Sleep(10)
+                SendKeys.SendWait("{ENTER}")
+                Pathh = Windowspath
+                'Process.Start(Windowspath)
+            Else
+                Console.WriteLine("BAD" & LinkA.Text)
+
+            End If
+
+
+
+        ElseIf Pathspasted.Contains(StorageNyMac1) Or Pathspasted.Contains(StorageNyMac2) Then
+
+
+            Dim Windowspath = Pathspasted.Replace(StorageNyMac1, StorageNyc)
+            Windowspath = Windowspath.Replace(StorageNyMac2, StorageNyc)
+            'Continue on
+            Windowspath = Windowspath.Replace("/", "\")
+            Thread.Sleep(200)
+            TxtA.Text = Windowspath
+            LblA.Text = Windowspath
+            LinkA.Text = Windowspath
+            Mainpath = Windowspath
+            Console.WriteLine(Windowspath)
+            If Directory.Exists(Windowspath) Then
+                'MessageBox.Show(Windowspath)
+
+                Dim cd As String = "cd /d " & Windowspath
+
+                Console.WriteLine(Windowspath)
+
+
+                Process.Start("cmd.exe")
+
+
+                Threading.Thread.Sleep(Delay)
+                SendKeys.SendWait(cd)
+                Threading.Thread.Sleep(10)
+                SendKeys.SendWait("{ENTER}")
+                Threading.Thread.Sleep(10)
+                SendKeys.SendWait("start .")
+                Threading.Thread.Sleep(10)
+                SendKeys.SendWait("{ENTER}")
+                SendKeys.SendWait("exit")
+                Threading.Thread.Sleep(10)
+                SendKeys.SendWait("{ENTER}")
+                Pathh = Windowspath
+                'Process.Start(Windowspath)
+            Else
+                Console.WriteLine("BAD" & LinkA.Text)
+
+            End If
+
+
+
+            'User Shares
+        Else
+            If Pathspasted.Contains(UsersharesMac1) Or Pathspasted.Contains(UsersharesMac2) Then
+
+
+                Dim Windowspath = Pathspasted.Replace(UsersharesMac1, Usersharesc)
+                Windowspath = Windowspath.Replace(UsersharesMac2, Usersharesc)
+                'Continue on
+                Windowspath = Windowspath.Replace("/", "\")
+                Thread.Sleep(200)
+                TxtA.Text = Windowspath
+                LblA.Text = Windowspath
+                LinkA.Text = Windowspath
+                Mainpath = Windowspath
+                Console.WriteLine(Windowspath)
+                If Directory.Exists(Windowspath) Then
+                    'MessageBox.Show(Windowspath)
+
+                    Dim cd As String = "cd /d " & Windowspath
+
+                    Console.WriteLine(Windowspath)
+
+
+                    Process.Start("cmd.exe")
+
+
+                    Threading.Thread.Sleep(Delay)
+                    SendKeys.SendWait(cd)
+                    Threading.Thread.Sleep(10)
+                    SendKeys.SendWait("{ENTER}")
+                    Threading.Thread.Sleep(10)
+                    SendKeys.SendWait("start .")
+                    Threading.Thread.Sleep(10)
+                    SendKeys.SendWait("{ENTER}")
+                    SendKeys.SendWait("exit")
+                    Threading.Thread.Sleep(10)
+                    SendKeys.SendWait("{ENTER}")
+                    Pathh = Windowspath
+                    'Process.Start(Windowspath)
+                Else
+                    Pathh = Windowspath
+
+                End If
+
+                'Software
+            Else
+                If Pathspasted.Contains(SoftwareMac1) Or Pathspasted.Contains(SoftwareMac2) Then
+
+
+                    Dim Windowspath = Pathspasted.Replace(SoftwareMac1, Softwarec)
+                    Windowspath = Windowspath.Replace(SoftwareMac2, StorageNyc)
+                    'Continue on
+                    Windowspath = Windowspath.Replace("/", "\")
+                    Thread.Sleep(200)
+                    TxtA.Text = Windowspath
+                    LblA.Text = Windowspath
+                    LinkA.Text = Windowspath
+                    Mainpath = Windowspath
+                    Console.WriteLine(Windowspath)
+                    If Directory.Exists(Windowspath) Then
+                        'MessageBox.Show(Windowspath)
+
+                        Dim cd As String = "cd /d " & Windowspath
+
+                        Console.WriteLine(Windowspath)
+
+
+                        Process.Start("cmd.exe")
+
+
+                        Threading.Thread.Sleep(Delay)
+                        SendKeys.SendWait(cd)
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("{ENTER}")
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("start .")
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("{ENTER}")
+                        SendKeys.SendWait("exit")
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("{ENTER}")
+                        Pathh = Windowspath
+                        'Process.Start(Windowspath)
+                    Else
+                        Pathh = Windowspath
+
+                    End If
+
+                    'Multimedia
+                Else
+                    If Pathspasted.Contains(MultimediaMac1) Or Pathspasted.Contains(MultimediaMac2) Then
+
+
+                        Dim Windowspath = Pathspasted.Replace(MultimediaMac1, Multimediac)
+                        Windowspath = Windowspath.Replace(MultimediaMac2, Multimediac)
+                        'Continue on
+                        Windowspath = Windowspath.Replace("/", "\")
+                        Thread.Sleep(200)
+                        TxtA.Text = Windowspath
+                        LblA.Text = Windowspath
+                        LinkA.Text = Windowspath
+                        Mainpath = Windowspath
+                        Console.WriteLine(Windowspath)
+                        If Directory.Exists(Windowspath) Then
+                            'MessageBox.Show(Windowspath)
+
+                            Dim cd As String = "cd /d " & Windowspath
+
+                            Console.WriteLine(Windowspath)
+
+
+                            Process.Start("cmd.exe")
+
+
+                            Threading.Thread.Sleep(Delay)
+                            SendKeys.SendWait(cd)
+                            Threading.Thread.Sleep(10)
+                            SendKeys.SendWait("{ENTER}")
+                            Threading.Thread.Sleep(10)
+                            SendKeys.SendWait("start .")
+                            Threading.Thread.Sleep(10)
+                            SendKeys.SendWait("{ENTER}")
+                            SendKeys.SendWait("exit")
+                            Threading.Thread.Sleep(10)
+                            SendKeys.SendWait("{ENTER}")
+                            Pathh = Windowspath
+                            'Process.Start(Windowspath)
+                        Else
+                            Pathh = Windowspath
+
+                        End If
+
+                    Else
+
+                        'JKRAssetBank
+
+                        If Pathspasted.Contains(JKRAssetBankMac1) Or Pathspasted.Contains(JKRAssetBankMac2) Then
+
+
+                            Dim Windowspath = Pathspasted.Replace(JKRAssetBankMac1, JKRAssetBankc)
+                            Windowspath = Windowspath.Replace(JKRAssetBankMac2, JKRAssetBankc)
+                            'Continue on
+                            Windowspath = Windowspath.Replace("/", "\")
+                            Thread.Sleep(200)
+                            TxtA.Text = Windowspath
+                            LblA.Text = Windowspath
+                            LinkA.Text = Windowspath
+                            Mainpath = Windowspath
+                            Console.WriteLine(Windowspath)
+                            If Directory.Exists(Windowspath) Then
+                                'MessageBox.Show(Windowspath)
+
+                                Dim cd As String = "cd /d " & Windowspath
+
+                                Console.WriteLine(Windowspath)
+
+
+                                Process.Start("cmd.exe")
+
+
+                                Threading.Thread.Sleep(Delay)
+                                SendKeys.SendWait(cd)
+                                Threading.Thread.Sleep(10)
+                                SendKeys.SendWait("{ENTER}")
+                                Threading.Thread.Sleep(10)
+                                SendKeys.SendWait("start .")
+                                Threading.Thread.Sleep(10)
+                                SendKeys.SendWait("{ENTER}")
+                                SendKeys.SendWait("exit")
+                                Threading.Thread.Sleep(10)
+                                SendKeys.SendWait("{ENTER}")
+                                Pathh = Windowspath
+                                'Process.Start(Windowspath)
+                            Else
+                                Pathh = Windowspath
+
+                            End If
+
+                            'ArchiveProjects2016
+                        Else
+                            If Pathspasted.Contains(ArchiveProjects2016Mac1) Or Pathspasted.Contains(ArchiveProjects2016Mac2) Then
+
+
+                                Dim Windowspath = Pathspasted.Replace(ArchiveProjects2016Mac1, ArchiveProjects2016c)
+                                Windowspath = Windowspath.Replace(ArchiveProjects2016Mac2, ArchiveProjects2016c)
+                                'Continue on
+                                Windowspath = Windowspath.Replace("/", "\")
+                                Thread.Sleep(200)
+                                TxtA.Text = Windowspath
+                                LblA.Text = Windowspath
+                                LinkA.Text = Windowspath
+                                Mainpath = Windowspath
+                                Console.WriteLine(Windowspath)
+                                Pathh = Windowspath
+                                TxtA.Text = Pathh
+                                LblA.Text = Pathh
+                                LinkA.Text = Pathh
+                                Mainpath = Pathh
+                                If Directory.Exists(Windowspath) Then
+                                    'MessageBox.Show(Windowspath)
+
+                                    Dim cd As String = "cd /d " & Windowspath
+
+                                    Console.WriteLine(Windowspath)
+
+
+                                    Process.Start("cmd.exe")
+
+
+                                    Threading.Thread.Sleep(Delay)
+                                    SendKeys.SendWait(cd)
+                                    Threading.Thread.Sleep(10)
+                                    SendKeys.SendWait("{ENTER}")
+                                    Threading.Thread.Sleep(10)
+                                    SendKeys.SendWait("start .")
+                                    Threading.Thread.Sleep(10)
+                                    SendKeys.SendWait("{ENTER}")
+                                    SendKeys.SendWait("exit")
+                                    Threading.Thread.Sleep(10)
+                                    SendKeys.SendWait("{ENTER}")
+                                    Pathh = Windowspath
+                                    TxtA.Text = Pathh
+                                    LblA.Text = Pathh
+                                    LinkA.Text = Pathh
+                                    Mainpath = Pathh
+                                    'Process.Start(Windowspath)
+                                Else
+                                    Pathh = Windowspath
+
+                                End If
+
+                                'ArchiveProjects2017
+                            Else
+                                If Pathspasted.Contains(ArchiveProjects2017Mac1) Or Pathspasted.Contains(ArchiveProjects2017Mac2) Then
+
+
+                                    Dim Windowspath = Pathspasted.Replace(ArchiveProjects2017Mac1, ArchiveProjects2017c)
+                                    Windowspath = Windowspath.Replace(ArchiveProjects2017Mac2, ArchiveProjects2017c)
+                                    'Continue on
+                                    Windowspath = Windowspath.Replace("/", "\")
+                                    Thread.Sleep(200)
+                                    TxtA.Text = Windowspath
+                                    LblA.Text = Windowspath
+                                    LinkA.Text = Windowspath
+                                    Mainpath = Windowspath
+                                    Console.WriteLine(Windowspath)
+                                    Pathh = Windowspath
+                                    TxtA.Text = Pathh
+                                    LblA.Text = Pathh
+                                    LinkA.Text = Pathh
+                                    Mainpath = Pathh
+                                    If Directory.Exists(Windowspath) Then
+                                        'MessageBox.Show(Windowspath)
+
+                                        Dim cd As String = "cd /d " & Windowspath
+
+                                        Console.WriteLine(Windowspath)
+
+
+                                        Process.Start("cmd.exe")
+
+
+                                        Threading.Thread.Sleep(Delay)
+                                        SendKeys.SendWait(cd)
+                                        Threading.Thread.Sleep(10)
+                                        SendKeys.SendWait("{ENTER}")
+                                        Threading.Thread.Sleep(10)
+                                        SendKeys.SendWait("start .")
+                                        Threading.Thread.Sleep(10)
+                                        SendKeys.SendWait("{ENTER}")
+                                        SendKeys.SendWait("exit")
+                                        Threading.Thread.Sleep(10)
+                                        SendKeys.SendWait("{ENTER}")
+                                        Pathh = Windowspath
+                                        'Process.Start(Windowspath)
+                                    Else
+                                        Pathh = Windowspath
+
+                                    End If
+
+
+
+                                End If
+
+                            End If
+
+                        End If
+
+
+                    End If
+
+
+
+                    ' User Shares
+
+
+                End If
+
+            End If
+
+        End If
+
+
+
+
+        'Dim Windowspath = Pathspasted.Replace("afp://NY01-MP02/Storage NY", "Y:\Storage NY")
+        'Windowspath = Windowspath.Replace("/", "\")
+        ''k
+
+        TxtA.Text = Pathh
+        LblA.Text = Pathh
+        LinkA.Text = Pathh
+        Mainpath = Pathh
 
     End Sub
 
@@ -117,7 +510,7 @@ Public Class PathTracer
             End Try
 
             Windowtit = wTitle.ToString
-            If Windowtit.Contains("Chrome") Or Windowtit.Contains("Slack") Then
+            If Windowtit.Contains("Chrome") Or Windowtit.Contains("Slack") Or Windowtit.Contains("Mail") Then
                 hWnd = FindWindow(Nothing, Windowtit)
                 Dim didSetForeground As Boolean = SetForegroundWindow(hWnd)
                 If Not didSetForeground Then
@@ -144,57 +537,456 @@ Public Class PathTracer
                 Console.WriteLine(Clipboardcopy)
 
                 Dim Pathspasted = Clipboardcopy
-                Dim Windowspath = Pathspasted.Replace("afp://NY01-MP02/Storage NY", "Y:\Storage NY")
-                Windowspath = Windowspath.Replace("/", "\")
-                'k
-                Thread.Sleep(200)
-                PathTracer.TxtA.Text = Windowspath
-                PathTracer.LblA.Text = Windowspath
-                PathTracer.LinkA.Text = Windowspath
-                PathTracer.Mainpath = Windowspath
-                If Directory.Exists(Windowspath) Then
-                    'MessageBox.Show(Windowspath)
-
-                    Dim cd As String = "cd /d " & Windowspath
 
 
-                    Process.Start("cmd.exe")
+                ' Marketing 
+
+                If Pathspasted.Contains(MarketingMac1) Or Pathspasted.Contains(MarketingMac2) Then
 
 
-                    Threading.Thread.Sleep(100)
-                    SendKeys.SendWait(cd)
-                    Threading.Thread.Sleep(10)
-                    SendKeys.SendWait("{ENTER}")
-                    Threading.Thread.Sleep(10)
-                    SendKeys.SendWait("start .")
-                    Threading.Thread.Sleep(10)
-                    SendKeys.SendWait("{ENTER}")
-                    SendKeys.SendWait("exit")
-                    Threading.Thread.Sleep(10)
-                    SendKeys.SendWait("{ENTER}")
+                    Dim Windowspath = Pathspasted.Replace(MarketingMac1, Marketingc)
+                    Windowspath = Windowspath.Replace(MarketingMac2, Marketingc)
+                    'Continue on
+                    Windowspath = Windowspath.Replace("/", "\")
+                    Thread.Sleep(200)
+                    PathTracer.TxtA.Text = Windowspath
+                    PathTracer.LblA.Text = Windowspath
+                    PathTracer.LinkA.Text = Windowspath
+                    PathTracer.Mainpath = Windowspath
+                    If Directory.Exists(Windowspath) Then
+                        'MessageBox.Show(Windowspath)
+                        Opening.Show()
+                        Opening.TopMost = True
+                        Dim cd As String = "cd /d " & Windowspath
 
-                    'Process.Start(Windowspath)
+
+                        Process.Start("cmd.exe")
+
+
+                        Threading.Thread.Sleep(Delay)
+                        SendKeys.SendWait(cd)
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("{ENTER}")
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("start .")
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("{ENTER}")
+                        SendKeys.SendWait("exit")
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("{ENTER}")
+
+                        'Process.Start(Windowspath)
+                    Else
+                        MessageBox.Show("The directory does not exist. Check again.")
+
+                    End If
+
+
+
+                ElseIf Pathspasted.Contains(StorageNyMac1) Or Pathspasted.Contains(StorageNyMac2) Then
+
+
+                    Dim Windowspath = Pathspasted.Replace(StorageNyMac1, StorageNyc)
+                    Windowspath = Windowspath.Replace(StorageNyMac2, StorageNyc)
+                    'Continue on
+                    Windowspath = Windowspath.Replace("/", "\")
+                    Thread.Sleep(200)
+                    PathTracer.TxtA.Text = Windowspath
+                    PathTracer.LblA.Text = Windowspath
+                    PathTracer.LinkA.Text = Windowspath
+                    PathTracer.Mainpath = Windowspath
+                    Console.WriteLine(Windowspath)
+                    If Directory.Exists(Windowspath) Then
+                        'MessageBox.Show(Windowspath)
+                        Opening.Show()
+                        Opening.TopMost = True
+                        Dim cd As String = "cd /d " & Windowspath
+
+                        Console.WriteLine(Windowspath)
+
+
+                        Process.Start("cmd.exe")
+
+
+                        Threading.Thread.Sleep(Delay)
+                        SendKeys.SendWait(cd)
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("{ENTER}")
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("start .")
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("{ENTER}")
+                        SendKeys.SendWait("exit")
+                        Threading.Thread.Sleep(10)
+                        SendKeys.SendWait("{ENTER}")
+
+                        'Process.Start(Windowspath)
+                    Else
+                        Console.WriteLine("BAD" & PathTracer.LinkA.Text)
+                        MessageBox.Show("The directory does not exist. Check again.")
+                    End If
+
+
+
+                    'User Shares
                 Else
-                    Console.WriteLine("BAD" & PathTracer.LinkA.Text)
+                    If Pathspasted.Contains(UsersharesMac1) Or Pathspasted.Contains(UsersharesMac2) Then
+
+
+                        Dim Windowspath = Pathspasted.Replace(UsersharesMac1, Usersharesc)
+                        Windowspath = Windowspath.Replace(UsersharesMac2, Usersharesc)
+                        'Continue on
+                        Windowspath = Windowspath.Replace("/", "\")
+                        Thread.Sleep(200)
+                        PathTracer.TxtA.Text = Windowspath
+                        PathTracer.LblA.Text = Windowspath
+                        PathTracer.LinkA.Text = Windowspath
+                        PathTracer.Mainpath = Windowspath
+                        Console.WriteLine(Windowspath)
+                        If Directory.Exists(Windowspath) Then
+                            'MessageBox.Show(Windowspath)
+                            Opening.Show()
+                            Opening.TopMost = True
+                            Dim cd As String = "cd /d " & Windowspath
+
+                            Console.WriteLine(Windowspath)
+
+
+                            Process.Start("cmd.exe")
+
+
+                            Threading.Thread.Sleep(Delay)
+                            SendKeys.SendWait(cd)
+                            Threading.Thread.Sleep(10)
+                            SendKeys.SendWait("{ENTER}")
+                            Threading.Thread.Sleep(10)
+                            SendKeys.SendWait("start .")
+                            Threading.Thread.Sleep(10)
+                            SendKeys.SendWait("{ENTER}")
+                            SendKeys.SendWait("exit")
+                            Threading.Thread.Sleep(10)
+                            SendKeys.SendWait("{ENTER}")
+
+                            'Process.Start(Windowspath)
+                        Else
+                            Console.WriteLine("BAD" & PathTracer.LinkA.Text)
+                            MessageBox.Show("The directory does not exist. Check again.")
+                        End If
+
+                        'Software
+                    Else
+                        If Pathspasted.Contains(SoftwareMac1) Or Pathspasted.Contains(SoftwareMac2) Then
+
+
+                            Dim Windowspath = Pathspasted.Replace(SoftwareMac1, Softwarec)
+                            Windowspath = Windowspath.Replace(SoftwareMac2, StorageNyc)
+                            'Continue on
+                            Windowspath = Windowspath.Replace("/", "\")
+                            Thread.Sleep(200)
+                            PathTracer.TxtA.Text = Windowspath
+                            PathTracer.LblA.Text = Windowspath
+                            PathTracer.LinkA.Text = Windowspath
+                            PathTracer.Mainpath = Windowspath
+                            Console.WriteLine(Windowspath)
+                            If Directory.Exists(Windowspath) Then
+                                'MessageBox.Show(Windowspath)
+                                Opening.Show()
+                                Opening.TopMost = True
+                                Dim cd As String = "cd /d " & Windowspath
+
+                                Console.WriteLine(Windowspath)
+
+
+                                Process.Start("cmd.exe")
+
+
+                                Threading.Thread.Sleep(Delay)
+                                SendKeys.SendWait(cd)
+                                Threading.Thread.Sleep(10)
+                                SendKeys.SendWait("{ENTER}")
+                                Threading.Thread.Sleep(10)
+                                SendKeys.SendWait("start .")
+                                Threading.Thread.Sleep(10)
+                                SendKeys.SendWait("{ENTER}")
+                                SendKeys.SendWait("exit")
+                                Threading.Thread.Sleep(10)
+                                SendKeys.SendWait("{ENTER}")
+
+                                'Process.Start(Windowspath)
+                            Else
+                                Console.WriteLine("BAD" & PathTracer.LinkA.Text)
+                                MessageBox.Show("The directory does not exist. Check again.")
+                            End If
+
+                            'Multimedia
+                        Else
+                            If Pathspasted.Contains(MultimediaMac1) Or Pathspasted.Contains(MultimediaMac2) Then
+
+
+                                Dim Windowspath = Pathspasted.Replace(MultimediaMac1, Multimediac)
+                                Windowspath = Windowspath.Replace(MultimediaMac2, Multimediac)
+                                'Continue on
+                                Windowspath = Windowspath.Replace("/", "\")
+                                Thread.Sleep(200)
+                                PathTracer.TxtA.Text = Windowspath
+                                PathTracer.LblA.Text = Windowspath
+                                PathTracer.LinkA.Text = Windowspath
+                                PathTracer.Mainpath = Windowspath
+                                Console.WriteLine(Windowspath)
+                                If Directory.Exists(Windowspath) Then
+                                    'MessageBox.Show(Windowspath)
+                                    Opening.Show()
+                                    Opening.TopMost = True
+                                    Dim cd As String = "cd /d " & Windowspath
+
+                                    Console.WriteLine(Windowspath)
+
+
+                                    Process.Start("cmd.exe")
+
+
+                                    Threading.Thread.Sleep(Delay)
+                                    SendKeys.SendWait(cd)
+                                    Threading.Thread.Sleep(10)
+                                    SendKeys.SendWait("{ENTER}")
+                                    Threading.Thread.Sleep(10)
+                                    SendKeys.SendWait("start .")
+                                    Threading.Thread.Sleep(10)
+                                    SendKeys.SendWait("{ENTER}")
+                                    SendKeys.SendWait("exit")
+                                    Threading.Thread.Sleep(10)
+                                    SendKeys.SendWait("{ENTER}")
+
+                                    'Process.Start(Windowspath)
+                                Else
+                                    Console.WriteLine("BAD" & PathTracer.LinkA.Text)
+                                    MessageBox.Show("The directory does not exist. Check again.")
+                                End If
+
+                            Else
+
+                                'JKRAssetBank
+
+                                If Pathspasted.Contains(JKRAssetBankMac1) Or Pathspasted.Contains(JKRAssetBankMac2) Then
+
+
+                                    Dim Windowspath = Pathspasted.Replace(JKRAssetBankMac1, JKRAssetBankc)
+                                    Windowspath = Windowspath.Replace(JKRAssetBankMac2, JKRAssetBankc)
+                                    'Continue on
+                                    Windowspath = Windowspath.Replace("/", "\")
+                                    Thread.Sleep(200)
+                                    PathTracer.TxtA.Text = Windowspath
+                                    PathTracer.LblA.Text = Windowspath
+                                    PathTracer.LinkA.Text = Windowspath
+                                    PathTracer.Mainpath = Windowspath
+                                    Console.WriteLine(Windowspath)
+                                    If Directory.Exists(Windowspath) Then
+                                        'MessageBox.Show(Windowspath)
+                                        Opening.Show()
+                                        Opening.TopMost = True
+                                        Dim cd As String = "cd /d " & Windowspath
+
+                                        Console.WriteLine(Windowspath)
+
+
+                                        Process.Start("cmd.exe")
+
+
+                                        Threading.Thread.Sleep(Delay)
+                                        SendKeys.SendWait(cd)
+                                        Threading.Thread.Sleep(10)
+                                        SendKeys.SendWait("{ENTER}")
+                                        Threading.Thread.Sleep(10)
+                                        SendKeys.SendWait("start .")
+                                        Threading.Thread.Sleep(10)
+                                        SendKeys.SendWait("{ENTER}")
+                                        SendKeys.SendWait("exit")
+                                        Threading.Thread.Sleep(10)
+                                        SendKeys.SendWait("{ENTER}")
+
+                                        'Process.Start(Windowspath)
+                                    Else
+                                        Console.WriteLine("BAD" & PathTracer.LinkA.Text)
+                                        MessageBox.Show("The directory does not exist. Check again.")
+                                    End If
+
+                                    'ArchiveProjects2016
+                                Else
+                                    If Pathspasted.Contains(ArchiveProjects2016Mac1) Or Pathspasted.Contains(ArchiveProjects2016Mac2) Then
+
+
+                                        Dim Windowspath = Pathspasted.Replace(ArchiveProjects2016Mac1, ArchiveProjects2016c)
+                                        Windowspath = Windowspath.Replace(ArchiveProjects2016Mac2, ArchiveProjects2016c)
+                                        'Continue on
+                                        Windowspath = Windowspath.Replace("/", "\")
+                                        Thread.Sleep(200)
+                                        PathTracer.TxtA.Text = Windowspath
+                                        PathTracer.LblA.Text = Windowspath
+                                        PathTracer.LinkA.Text = Windowspath
+                                        PathTracer.Mainpath = Windowspath
+                                        Console.WriteLine(Windowspath)
+                                        If Directory.Exists(Windowspath) Then
+                                            'MessageBox.Show(Windowspath)
+                                            Opening.Show()
+                                            Opening.TopMost = True
+                                            Dim cd As String = "cd /d " & Windowspath
+
+                                            Console.WriteLine(Windowspath)
+
+
+                                            Process.Start("cmd.exe")
+
+
+                                            Threading.Thread.Sleep(Delay)
+                                            SendKeys.SendWait(cd)
+                                            Threading.Thread.Sleep(10)
+                                            SendKeys.SendWait("{ENTER}")
+                                            Threading.Thread.Sleep(10)
+                                            SendKeys.SendWait("start .")
+                                            Threading.Thread.Sleep(10)
+                                            SendKeys.SendWait("{ENTER}")
+                                            SendKeys.SendWait("exit")
+                                            Threading.Thread.Sleep(10)
+                                            SendKeys.SendWait("{ENTER}")
+
+                                            'Process.Start(Windowspath)
+                                        Else
+                                            Console.WriteLine("BAD" & PathTracer.LinkA.Text)
+                                            MessageBox.Show("The directory does not exist. Check again.")
+                                        End If
+
+                                        'ArchiveProjects2017
+                                    Else
+                                        If Pathspasted.Contains(ArchiveProjects2017Mac1) Or Pathspasted.Contains(ArchiveProjects2017Mac2) Then
+
+
+                                            Dim Windowspath = Pathspasted.Replace(ArchiveProjects2017Mac1, ArchiveProjects2017c)
+                                            Windowspath = Windowspath.Replace(ArchiveProjects2017Mac2, ArchiveProjects2017c)
+                                            'Continue on
+                                            Windowspath = Windowspath.Replace("/", "\")
+                                            Thread.Sleep(200)
+                                            PathTracer.TxtA.Text = Windowspath
+                                            PathTracer.LblA.Text = Windowspath
+                                            PathTracer.LinkA.Text = Windowspath
+                                            PathTracer.Mainpath = Windowspath
+                                            Console.WriteLine(Windowspath)
+                                            If Directory.Exists(Windowspath) Then
+                                                'MessageBox.Show(Windowspath)
+                                                Opening.Show()
+                                                Opening.TopMost = True
+                                                Dim cd As String = "cd /d " & Windowspath
+
+                                                Console.WriteLine(Windowspath)
+
+
+                                                Process.Start("cmd.exe")
+
+
+                                                Threading.Thread.Sleep(Delay)
+                                                SendKeys.SendWait(cd)
+                                                Threading.Thread.Sleep(10)
+                                                SendKeys.SendWait("{ENTER}")
+                                                Threading.Thread.Sleep(10)
+                                                SendKeys.SendWait("start .")
+                                                Threading.Thread.Sleep(10)
+                                                SendKeys.SendWait("{ENTER}")
+                                                SendKeys.SendWait("exit")
+                                                Threading.Thread.Sleep(10)
+                                                SendKeys.SendWait("{ENTER}")
+
+                                                'Process.Start(Windowspath)
+                                            Else
+                                                Console.WriteLine("BAD" & PathTracer.LinkA.Text)
+                                                MessageBox.Show("The directory does not exist. Check again.")
+                                            End If
+
+                                        Else
+                                            If Pathspasted.Contains("C:\") Then
+
+
+                                                Dim Windowspath = Pathspasted.Replace(ArchiveProjects2017Mac1, ArchiveProjects2017c)
+                                                Windowspath = Windowspath.Replace(ArchiveProjects2017Mac2, ArchiveProjects2017c)
+                                                'Continue on
+                                                Windowspath = Windowspath.Replace("/", "\")
+                                                Thread.Sleep(200)
+                                                PathTracer.TxtA.Text = Windowspath
+                                                PathTracer.LblA.Text = Windowspath
+                                                PathTracer.LinkA.Text = Windowspath
+                                                PathTracer.Mainpath = Windowspath
+                                                Console.WriteLine(Windowspath)
+                                                If Directory.Exists(Windowspath) Then
+                                                    'MessageBox.Show(Windowspath)
+                                                    Opening.Show()
+                                                    Opening.TopMost = True
+                                                    Dim cd As String = "cd /d " & Windowspath
+
+                                                    Console.WriteLine(Windowspath)
+
+
+                                                    Process.Start("cmd.exe")
+
+
+                                                    Threading.Thread.Sleep(Delay)
+                                                    SendKeys.SendWait(cd)
+                                                    Threading.Thread.Sleep(10)
+                                                    SendKeys.SendWait("{ENTER}")
+                                                    Threading.Thread.Sleep(10)
+                                                    SendKeys.SendWait("start .")
+                                                    Threading.Thread.Sleep(10)
+                                                    SendKeys.SendWait("{ENTER}")
+                                                    SendKeys.SendWait("exit")
+                                                    Threading.Thread.Sleep(10)
+                                                    SendKeys.SendWait("{ENTER}")
+
+                                                    'Process.Start(Windowspath)
+                                                Else
+                                                    Console.WriteLine("BAD" & PathTracer.LinkA.Text)
+                                                    MessageBox.Show("The directory does not exist. Check again.")
+                                                End If
+
+
+                                            End If
+
+                                        End If
+
+                                    End If
+
+
+                                End If
+
+
+
+                                ' User Shares
+
+                            End If
+                        End If
+
+                    End If
 
                 End If
 
             End If
 
-            End If
+        End If
 
+        Opening.Close()
 
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Hotkey.registerHotkey(Me, Screencapturekey, Hotkey.KeyModifier.Alt)
-        Screencapturekey = My.Settings.Screencapturekey
+        Hotkey.registerHotkey(Me, Shortcutkey, SModifierkey)
+        Shortcutkey = My.Settings.Shortcutkey
+        SModifierkey = My.Settings.SModifierkey
 
+        Delay = My.Settings.Delay
 
     End Sub
 
     Public Sub closingform1() Handles Me.FormClosing
-        My.Settings.Screencapturekey = Screencapturekey
+        My.Settings.Shortcutkey = Shortcutkey
+        My.Settings.SModifierkey = SModifierkey
+
+        My.Settings.Delay = Delay
 
     End Sub
 
@@ -240,6 +1032,17 @@ Public Class PathTracer
     Private Sub btnQuest_Click(sender As Object, e As EventArgs) Handles btnQuest.Click
 
         Help.Show()
+
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+        Settings.Show()
 
 
     End Sub
