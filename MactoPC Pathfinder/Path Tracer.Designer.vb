@@ -131,7 +131,7 @@ Partial Class PathTracer
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(461, 217)
+        Me.ClientSize = New System.Drawing.Size(451, 230)
         Me.Controls.Add(Me.btnQuest)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
@@ -144,6 +144,7 @@ Partial Class PathTracer
         Me.Controls.Add(Me.BtnMactoPC)
         Me.Font = New System.Drawing.Font("DIN", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "PathTracer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Path Tracer"

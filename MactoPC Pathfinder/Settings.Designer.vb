@@ -62,6 +62,7 @@ Partial Class Settings
         Me.Label25 = New System.Windows.Forms.Label()
         Me.txtDelay = New System.Windows.Forms.TextBox()
         Me.ButtonApplyDelay = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -335,7 +336,7 @@ Partial Class Settings
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("DIN", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(438, 388)
+        Me.Button2.Location = New System.Drawing.Point(837, 398)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(280, 43)
         Me.Button2.TabIndex = 0
@@ -344,7 +345,7 @@ Partial Class Settings
         '
         'TxtSKey
         '
-        Me.TxtSKey.Location = New System.Drawing.Point(439, 345)
+        Me.TxtSKey.Location = New System.Drawing.Point(838, 355)
         Me.TxtSKey.Name = "TxtSKey"
         Me.TxtSKey.Size = New System.Drawing.Size(31, 20)
         Me.TxtSKey.TabIndex = 1
@@ -353,7 +354,7 @@ Partial Class Settings
         '
         Me.Label20.Font = New System.Drawing.Font("DIN", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.White
-        Me.Label20.Location = New System.Drawing.Point(435, 171)
+        Me.Label20.Location = New System.Drawing.Point(834, 181)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(186, 27)
         Me.Label20.TabIndex = 2
@@ -363,7 +364,7 @@ Partial Class Settings
         '
         Me.Label19.Font = New System.Drawing.Font("DIN", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(434, 232)
+        Me.Label19.Location = New System.Drawing.Point(833, 242)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(77, 27)
         Me.Label19.TabIndex = 2
@@ -373,7 +374,7 @@ Partial Class Settings
         '
         Me.Label21.Font = New System.Drawing.Font("DIN", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.White
-        Me.Label21.Location = New System.Drawing.Point(434, 316)
+        Me.Label21.Location = New System.Drawing.Point(833, 326)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(77, 27)
         Me.Label21.TabIndex = 2
@@ -383,7 +384,7 @@ Partial Class Settings
         '
         Me.ComboModifiers.FormattingEnabled = True
         Me.ComboModifiers.Items.AddRange(New Object() {"Alt", "Cntrl"})
-        Me.ComboModifiers.Location = New System.Drawing.Point(438, 263)
+        Me.ComboModifiers.Location = New System.Drawing.Point(837, 273)
         Me.ComboModifiers.Name = "ComboModifiers"
         Me.ComboModifiers.Size = New System.Drawing.Size(73, 21)
         Me.ComboModifiers.TabIndex = 3
@@ -404,7 +405,7 @@ Partial Class Settings
         Me.Label23.BackColor = System.Drawing.Color.Transparent
         Me.Label23.Font = New System.Drawing.Font("DIN", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(432, 112)
+        Me.Label23.Location = New System.Drawing.Point(831, 122)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(222, 38)
         Me.Label23.TabIndex = 2
@@ -422,7 +423,7 @@ Partial Class Settings
         Me.Label24.BackColor = System.Drawing.Color.Transparent
         Me.Label24.Font = New System.Drawing.Font("DIN", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.White
-        Me.Label24.Location = New System.Drawing.Point(433, 453)
+        Me.Label24.Location = New System.Drawing.Point(410, 112)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(222, 38)
         Me.Label24.TabIndex = 2
@@ -432,7 +433,7 @@ Partial Class Settings
         '
         Me.Label25.Font = New System.Drawing.Font("DIN", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.White
-        Me.Label25.Location = New System.Drawing.Point(436, 499)
+        Me.Label25.Location = New System.Drawing.Point(413, 158)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(282, 43)
         Me.Label25.TabIndex = 2
@@ -440,7 +441,7 @@ Partial Class Settings
         '
         'txtDelay
         '
-        Me.txtDelay.Location = New System.Drawing.Point(438, 548)
+        Me.txtDelay.Location = New System.Drawing.Point(415, 207)
         Me.txtDelay.Name = "txtDelay"
         Me.txtDelay.Size = New System.Drawing.Size(280, 20)
         Me.txtDelay.TabIndex = 5
@@ -450,19 +451,32 @@ Partial Class Settings
         Me.ButtonApplyDelay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonApplyDelay.Font = New System.Drawing.Font("DIN", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonApplyDelay.ForeColor = System.Drawing.Color.White
-        Me.ButtonApplyDelay.Location = New System.Drawing.Point(438, 583)
+        Me.ButtonApplyDelay.Location = New System.Drawing.Point(415, 242)
         Me.ButtonApplyDelay.Name = "ButtonApplyDelay"
         Me.ButtonApplyDelay.Size = New System.Drawing.Size(280, 43)
         Me.ButtonApplyDelay.TabIndex = 0
         Me.ButtonApplyDelay.Text = "Apply"
         Me.ButtonApplyDelay.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("DIN", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(415, 324)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(280, 50)
+        Me.Button3.TabIndex = 6
+        Me.Button3.Text = "RESET APP"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(740, 655)
+        Me.ClientSize = New System.Drawing.Size(749, 655)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.txtDelay)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ComboModifiers)
@@ -503,6 +517,7 @@ Partial Class Settings
         Me.Controls.Add(Me.textStorageny)
         Me.Controls.Add(Me.textMarketing)
         Me.Controls.Add(Me.Button1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Settings"
         Me.Text = "Settings"
         Me.ResumeLayout(False)
@@ -550,4 +565,5 @@ Partial Class Settings
     Friend WithEvents Label25 As Label
     Friend WithEvents txtDelay As TextBox
     Friend WithEvents ButtonApplyDelay As Button
+    Friend WithEvents Button3 As Button
 End Class
